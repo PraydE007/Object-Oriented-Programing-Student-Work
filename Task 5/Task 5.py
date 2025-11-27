@@ -91,7 +91,7 @@ class Mage:
     """Маг - магічні закляття"""
     class_name = "Маг"
     
-    def __init__(self):
+    def __init__(self, **kwargs):
         # Базові характеристики класу
         self.base_health = 80
         self.base_attack = 15
@@ -190,8 +190,48 @@ class HumanWarrior(Warrior, Human, Hero):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
+class MageWarrior(Mage, Human, Hero):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+class RangerWarrior(Ranger, Human, Hero):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+class WarriorElf(Warrior, Elf, Hero):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+class WarriorDwarf(Warrior, Dwarf, Hero):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+class MageDwarf(Mage, Dwarf, Hero):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
 if __name__ == "__main__":
-    aragorn = HumanWarrior(name="Арагорн")
-    print(aragorn.get_info()) 
-    print(aragorn.class_ability()) 
-    print(aragorn.racial_ability())
+    human_warrior = HumanWarrior(name="Арагорн")
+    print(human_warrior.get_info()) 
+    print(human_warrior.class_ability()) 
+    print(human_warrior.racial_ability())
+    mage_warrior = MageWarrior(name="Гендальф")
+    print(mage_warrior.get_info()) 
+    print(mage_warrior.class_ability()) 
+    print(mage_warrior.racial_ability())
+    ranger_warrior = RangerWarrior(name="Боромир")
+    print(ranger_warrior.get_info()) 
+    print(ranger_warrior.class_ability()) 
+    print(ranger_warrior.racial_ability())
+    warrior_elf = WarriorElf(name="Леґолас")
+    print(warrior_elf.get_info()) 
+    print(warrior_elf.class_ability()) 
+    print(warrior_elf.racial_ability())
+    warrior_dwarf = WarriorDwarf(name="Ґімлі")
+    print(warrior_dwarf.get_info()) 
+    print(warrior_dwarf.class_ability()) 
+    print(warrior_dwarf.racial_ability())
+    mage_dwarf = MageDwarf(name="Дисарім")
+    print(mage_dwarf.get_info()) 
+    print(mage_dwarf.class_ability()) 
+    print(mage_dwarf.racial_ability())
