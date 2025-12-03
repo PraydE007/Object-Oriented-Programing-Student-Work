@@ -1,3 +1,5 @@
+# https://github.com/PraydE007/Object-Oriented-Programing-Student-Work/tree/main/Task%207.1
+
 # Калькулятор вартості замовлення в інтернет-магазині
 # Податок (ПДВ) = 20%
 # Знижка передається як десятковий дріб (0.1 = 10%)
